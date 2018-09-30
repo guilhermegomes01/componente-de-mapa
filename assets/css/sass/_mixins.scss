@@ -1,0 +1,57 @@
+// :before and :after
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// Width and Height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Tranforms positions
+@mixin reset{
+  transform: translate(-50%, -50%);
+}
+@mixin reset-x{
+  transform: translateX(-50%);
+}
+@mixin reset-y{
+  transform: translateY(-50%);
+}
+
+// Transitions
+@mixin transition{
+  transition: all 300ms ease-in-out;
+}
+
+// Flex-box
+@mixin flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+// Media queries
+$breakpoints: (
+    "lgx":     1728px,
+    "lgm":     1315px,
+    "lg":      1200px,
+    "mdl":     1079px,
+    "md":      992px,
+    "sm":      768px,
+    "xs":      479px,
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

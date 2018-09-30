@@ -1,0 +1,73 @@
+@font-face {
+    font-family: neoSans;
+    src: url("../../fonts/neo-sans-std.otf")format("opentype");
+}
+
+@font-face {
+    font-family: neoSansBold;
+    src: url("../../fonts/neo-sans-std-bold.otf")format("opentype");
+}
+
+@font-face {
+    font-family: neoSansItalic;
+    src: url("../../fonts/neo-sans-std-italic.otf")format("opentype");
+}
+
+$textColor: #365DBD;
+$shadowColor: #A7D5FF;
+
+html {
+    font-family: neoSans;
+    height: 100%;
+    
+}
+
+body {
+    background-color: $shadowColor;
+    color: $textColor;
+    height: 100%;
+}
+
+h2 {
+    font-family: neoSansBold;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: neoSansBold;
+    font-size: 18px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.mapa-container {
+    @extend .container;
+    height: 100%;
+    .mapa-content {
+        @extend .row;
+        height: 100%;
+        .select-local {
+            @include make-md-column(5);
+            @include make-lg-column(5);
+            margin-top: 8%;
+            p {
+                margin: 10px 0;
+            }
+            form {
+                .form-control {
+                    width: 45%;
+                    margin-top: 15px;
+                    color: $textColor;
+                    border: 1px solid;
+                }
+            }
+        }
+        .mapa {
+            @include make-md-column(7);
+            @include make-lg-column(7);
+            @include size(100%);
+        }
+    }
+}
