@@ -136,11 +136,6 @@ function initMap() {
   icon: 'assets/img/marker-nao-selecionado.png',
   });
 
-  // markerPetrolina.addListener('click', function() {
-  //   info.setContent('<h3>Empresa 1 - Unidade Petrolina</h3><br><p>Endereço: Av. José de Sá Maniçoba, S/N<br> Centro, Petrolina - PE, 56304-917<br>Responsável: Tiago Souza<br>Telefone: (87)3827-1231<br><button class="btn btn-default">Saiba Mais</button><p>');
-  //   info.open(map, markerPetrolina);
-  // });
-
   //Marcador da cidade Recife
   markerRecife = new google.maps.Marker({
   position: {lat: -8.0475, lng: -34.877},
@@ -148,11 +143,6 @@ function initMap() {
   title: 'Recife-PE',
   icon: 'assets/img/marker-nao-selecionado.png',
   });
-
-  // markerRecife.addListener('click', function() {
-  //   info.setContent('<h3>Empresa 2 - Unidade Recife</h3><br><p>Endereço: R. Adélino Frutuoso, 2-100<br>Cordeiro, Recife - PE, 50721-200<br>Responsável: Rodrigo Silva<br>Telefone: (81)3012-1481<br><button class="btn btn-default">Saiba Mais</button><p>');
-  //   info.open(map, markerRecife);
-  // });
 
   //Marcador da cidade João Pessoa
   markerJoaoPessoa = new google.maps.Marker({
@@ -162,11 +152,6 @@ function initMap() {
   icon: 'assets/img/marker-nao-selecionado.png',
   });
 
-  // markerJoaoPessoa.addListener('click', function() {
-  //   info.setContent('<h3>Empresa 3 - Unidade João Pessoa</h3><br><p>Endereço: Av. Epitacio Pessoa<br>Estados, João Pessoa - PB, 58030-000<br>Responsável: Tiago Melo<br>Telefone: (83)3122-4582<br><button class="btn btn-default">Saiba Mais</button><p>');
-  //   info.open(map, markerJoaoPessoa);
-  // });
-
   //Marcador da cidade São Paulo capital
   markerSpCapital = new google.maps.Marker({
   position: {lat: -23.5505, lng: -46.6333},
@@ -175,21 +160,11 @@ function initMap() {
   icon: 'assets/img/marker-nao-selecionado.png',
   });
 
-  // markerSpCapital.addListener('click', function() {
-  //   info.setContent('<h3>Empresa 4 - Unidade São Paulo Capital</h3><br><p>Endereço: R. Barão de Paranapiacaba, 20<br>Sé, São Paulo - SP, 01004-000<br>Responsável: José Rodrigues<br>Telefone: (11)4002-0881<br><button class="btn btn-default">Saiba Mais</button><p>');
-  //   info.open(map, markerSpCapital);
-  // });
-
   //Marcador da cidade São Paulo interior
   markerSpInterior = new google.maps.Marker({
   position: {lat: -21.1666, lng: -47.8833},
   map: map,
   title: 'São Paulo Interior-SP',
   icon: 'assets/img/marker-nao-selecionado.png',
-  });
-
-  // markerSpInterior.addListener('click', function() {
-  //   info.setContent('<h3>Empresa 5 - Unidade São Paulo Interior</h3><br><p>Endereço: Av. Dr. Francisco Junqueira, 150<br>Campos Elísios, Ribeirão Preto - SP, 14080-140<br>Responsável: Marcos Torres<br>Telefone: (11)2021-1145<br><button class="btn btn-default">Saiba Mais</button><p>');
-  //   info.open(map, markerSpInterior);
-  // });        
+  });       
 }
